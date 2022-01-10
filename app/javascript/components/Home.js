@@ -1,16 +1,16 @@
-import React from "react"
-import PropTypes from "prop-types"
-class Home extends React.Component {
-  render () {
-    return (
-      <React.Fragment>
-        Message: {this.props.message}
-      </React.Fragment>
-    );
-  }
-}
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Home = ({ message }) => {
+  return (
+    <div>
+      <h2>Message: {message}</h2>
+    </div>
+  );
+};
 
 Home.propTypes = {
-  message: PropTypes.string
+  message: PropTypes.string,
 };
-export default Home
+
+export default Home;
