@@ -1,9 +1,8 @@
 class V1::GreetingsController < ApplicationController
   def index
-    render json: { greetings: [
-      {
-        message: 'Hello From the controller'
-      }
-    ] }.to_json
+    greeting = Greeting.all.sample
+    render json: {
+      greeting: greeting
+    }.to_json
   end
 end
